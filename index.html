@@ -86,11 +86,11 @@
     .toolbar { justify-content: center; }
   }
 
-  @page { size: A4; margin: 0; }
+  @page { size: A4; margin: 15mm 16mm; }
   @media print {
     body { background: #fff; font-size: 10pt; }
     .toolbar { display: none; }
-    .page { margin: 0; width: 100%; box-shadow: none; padding: 14mm 16mm; }
+    .page { margin: 0; width: 100%; max-width: none; box-shadow: none; padding: 0; }
     h2 { break-after: avoid; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
@@ -118,7 +118,7 @@
   <section>
     <h2 data-i18n data-id="RINGKASAN PROFESIONAL">PROFESSIONAL SUMMARY</h2>
     <p class="summary" data-i18n
-       data-id="Lulusan Manajemen Informatika yang teliti (IPK 3,68/4,00) yang mencari posisi Staf Administrasi atau Data Entry. Berpengalaman menyiapkan lebih dari 20 dokumen SP2D per hari di BPKAD Lampung Tengah secara akurat dan tepat waktu, serta terampil dalam data entry, pengelolaan arsip, pelaporan bulanan di Excel, dan stock opname. Memadukan pengalaman administrasi pemerintahan dengan keahlian SQL dan sistem inventaris untuk menjaga catatan tetap akurat dan terdokumentasi dengan baik.">Detail-oriented Informatics Management graduate (GPA 3.68/4.00) seeking an Administrative Staff or Data Entry position. Experienced in preparing 20+ SP2D payment advice documents per day at BPKAD Lampung Tengah, accurately and on schedule, with strong skills in data entry, records management, monthly reporting in Excel, and stock opname. Combines hands-on government administration with SQL and inventory-system skills to keep records accurate and well documented.</p>
+       data-id="Lulusan Manajemen Informatika yang teliti (IPK 3,68/4,00) yang mencari posisi Staf Administrasi atau Data Entry. Berpengalaman menyiapkan lebih dari 20 dokumen Advis SP2D per hari di BPKAD Lampung Tengah secara akurat dan tepat waktu, serta terampil dalam data entry, pengelolaan arsip, pelaporan bulanan di Excel, dan stock opname. Memadukan pengalaman administrasi pemerintahan dengan keahlian SQL dan sistem inventaris untuk menjaga catatan tetap akurat dan terdokumentasi dengan baik.">Detail-oriented Informatics Management graduate (GPA 3.68/4.00) seeking an Administrative Staff or Data Entry position. Experienced in preparing 20+ SP2D payment advice documents per day at BPKAD Lampung Tengah, accurately and on schedule, with strong skills in data entry, records management, monthly reporting in Excel, and stock opname. Combines hands-on government administration with SQL and inventory-system skills to keep records accurate and well documented.</p>
   </section>
 
   <section>
@@ -141,10 +141,10 @@
       </div>
       <p class="org">BPKAD Lampung Tengah, Indonesia</p>
       <ul>
-        <li data-i18n data-id="Menyiapkan lebih dari 20 dokumen SP2D per hari secara akurat dan tepat waktu untuk mendukung pencairan dana pemerintah daerah.">Prepared 20+ SP2D payment advice documents per day, accurately and on schedule, to support regional government disbursements.</li>
-        <li data-i18n data-id="Merekap data pajak daerah bulanan dari seluruh instansi pemerintah daerah di Lampung Tengah menggunakan Microsoft Excel, menghasilkan laporan terstruktur untuk pemantauan dan pelaporan.">Recapped monthly regional tax data from all regional government agencies in Lampung Tengah in Microsoft Excel, producing organized reports for monitoring and reporting.</li>
-        <li data-i18n data-id="Melakukan stock opname perlengkapan kantor dan mencocokkan hasil hitung fisik (hingga ratusan unit per item) dengan catatan inventaris untuk meningkatkan akurasi data stok.">Conducted stock opname of office supplies, reconciling physical counts (up to hundreds of units per item) with inventory records to improve stock data accuracy.</li>
-        <li data-i18n data-id="Membangun sistem manajemen inventaris berbasis web (Laravel, MySQL) dengan dasbor real-time dan penghitungan ulang stok otomatis, disempurnakan melalui masukan pengguna.">Built a web-based inventory management system (Laravel, MySQL) with a real-time dashboard and automated stock recalculation, refined through user feedback.</li>
+        <li data-i18n data-id="Memproses 20+ dokumen SP2D per hari secara akurat dan tepat waktu, mendukung kelancaran pencairan dana pemerintah daerah.">Processed 20+ SP2D payment advice documents daily with accuracy and on-time delivery, supporting smooth regional government disbursements.</li>
+        <li data-i18n data-id="Merekap data pajak bulanan dari seluruh instansi pemerintah daerah Lampung Tengah ke dalam laporan Excel terstruktur untuk memudahkan pemantauan dan pelaporan.">Consolidated monthly tax data from all regional agencies in Lampung Tengah into structured Excel reports, making monitoring and reporting easier.</li>
+        <li data-i18n data-id="Mencocokkan hasil hitung fisik perlengkapan kantor (ratusan unit per item) dengan catatan inventaris, sehingga akurasi data stok meningkat.">Reconciled physical counts of office supplies (hundreds of units per item) against inventory records, improving stock data accuracy.</li>
+        <li data-i18n data-id="Membangun sistem inventaris berbasis web (Laravel, MySQL) dengan dasbor real-time dan penghitungan stok otomatis, disempurnakan lewat masukan pengguna agar catatan stok selalu terbarui.">Built a web-based inventory system (Laravel, MySQL) with a real-time dashboard and automatic stock recalculation, refined through user feedback to keep stock records current.</li>
       </ul>
     </div>
 
@@ -155,9 +155,9 @@
       </div>
       <p class="org">Satgas P4GN - Universitas Lampung, Bandar Lampung, Indonesia</p>
       <ul>
-        <li data-i18n data-id="Mendokumentasikan kebutuhan untuk tiga peran pengguna (Klien, Konselor, Admin) dalam bentuk spesifikasi fungsional.">Documented requirements for three user roles (Client, Counselor, Admin) as functional specifications.</li>
-        <li data-i18n data-id="Menyusun hasil survei menjadi statistik kepuasan pengguna untuk pelaporan kepada pemangku kepentingan.">Compiled survey responses into user satisfaction statistics for stakeholder reporting.</li>
-        <li data-i18n data-id="Menghasilkan aplikasi terpusat (satgasp4gn.unila.ac.id) yang menjaga catatan konseling tetap privat dan tertata, divalidasi melalui User Acceptance Testing (UAT).">Delivered a centrally managed application (satgasp4gn.unila.ac.id) that keeps counseling records private and well organized, validated through User Acceptance Testing (UAT).</li>
+        <li data-i18n data-id="Menerjemahkan kebutuhan tiga peran pengguna (Klien, Konselor, Admin) menjadi spesifikasi fungsional sebagai acuan pengembangan.">Translated the needs of three user roles (Client, Counselor, Admin) into functional specifications to guide development.</li>
+        <li data-i18n data-id="Mengolah hasil survei menjadi statistik kepuasan pengguna untuk pelaporan kepada pemangku kepentingan.">Converted survey responses into user satisfaction statistics for stakeholder reporting.</li>
+        <li data-i18n data-id="Menyelesaikan aplikasi terpusat (satgasp4gn.unila.ac.id) yang menjaga catatan konseling tetap privat dan tertata, tervalidasi melalui User Acceptance Testing (UAT).">Delivered a centralized application (satgasp4gn.unila.ac.id) that keeps counseling records private and organized, validated through User Acceptance Testing (UAT).</li>
       </ul>
     </div>
   </section>
@@ -170,9 +170,9 @@
       </div>
       <p class="org">HIMAKOM Unila - “Project Showcase 2024”, Bandar Lampung, Indonesia</p>
       <ul>
-        <li data-i18n data-id="Merancang rencana anggaran biaya (RAB) acara dan mengelola arus kas dengan pencatatan transparan serta dokumentasi lengkap, sehingga acara tetap sesuai anggaran.">Designed the event budget plan (RAB) and managed cash flow with transparent records and complete documentation, keeping the event within budget.</li>
-        <li data-i18n data-id="Menyusun proposal dan laporan pertanggungjawaban (LPJ) acara serta berkontribusi pada konsep acara dan alur kegiatan.">Prepared the event proposal and accountability report (LPJ) and contributed to the event concept and activity flow.</li>
-        <li data-i18n data-id="Mengevaluasi pelaksanaan acara terhadap alur dan anggaran yang direncanakan agar sesuai dengan harapan pemangku kepentingan.">Evaluated event execution against the planned flow and budget to meet stakeholder expectations.</li>
+        <li data-i18n data-id="Merencanakan anggaran acara (RAB) dan mengelola arus kas dengan pencatatan transparan serta dokumentasi lengkap, sehingga acara tetap sesuai anggaran.">Planned the event budget (RAB) and managed cash flow with transparent, fully documented records, keeping the event within budget.</li>
+        <li data-i18n data-id="Menulis proposal dan laporan pertanggungjawaban (LPJ) acara serta berkontribusi pada konsep dan alur kegiatan.">Wrote the event proposal and accountability report (LPJ) and contributed to the event concept and activity flow.</li>
+        <li data-i18n data-id="Mengevaluasi pelaksanaan acara terhadap alur dan anggaran yang direncanakan demi memenuhi harapan pemangku kepentingan.">Evaluated event execution against the planned flow and budget to meet stakeholder expectations.</li>
       </ul>
     </div>
   </section>
@@ -201,8 +201,8 @@
       </div>
       <p class="org">FMIPA Universitas Lampung</p>
       <ul>
-        <li data-i18n data-id="Mengembangkan “WONTASTIC”, konsep bisnis makanan sehat dan praktis untuk mahasiswa dan pekerja kantoran, dengan wonton ayam tanpa pengawet, pemasaran digital, dan layanan pengantaran.">Developed “WONTASTIC,” a healthy and practical food business concept for students and office workers, featuring preservative-free chicken wontons, digital marketing, and delivery service.</li>
-        <li data-i18n data-id="Menganalisis kelayakan operasional dan menyusun rencana bisnis dengan target 10.800 unit pada tahun pertama, proyeksi ROI 174,9%, dan periode pengembalian modal 1,26 bulan.">Analyzed operational feasibility and prepared a business plan targeting 10,800 units in the first year, with a projected ROI of 174.9% and a payback period of 1.26 months.</li>
+        <li data-i18n data-id="Menyusun konsep bisnis “WONTASTIC”, makanan sehat dan praktis untuk mahasiswa dan pekerja kantoran: wonton ayam tanpa pengawet, pemasaran digital, dan layanan antar.">Created “WONTASTIC,” a healthy, practical food business concept for students and office workers: preservative-free chicken wontons, digital marketing, and delivery.</li>
+        <li data-i18n data-id="Menilai kelayakan operasional dan menyusun rencana bisnis dengan target 10.800 unit pada tahun pertama, proyeksi ROI 174,9%, dan balik modal 1,26 bulan.">Assessed operational feasibility and built a business plan targeting 10,800 units in year one, with a projected ROI of 174.9% and a 1.26-month payback period.</li>
       </ul>
     </div>
   </section>
