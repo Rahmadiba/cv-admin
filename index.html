@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV - Afifah Rahma Adibah Samudra</title>
+<style>
+  :root {
+    --ink: #000000;
+    --muted: #333333;
+    --rule: #000000;
+    --paper: #ffffff;
+    --desk: #e9ebee;
+    --accent: #1f3a5f;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--desk);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
 
+  /* Toolbar */
+  .toolbar {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; justify-content: flex-end; align-items: center; gap: 10px;
+    padding: 10px 16px;
+    background: #ffffff; border-bottom: 1px solid #c9cdd3;
+  }
+  .lang { display: inline-flex; border: 1px solid var(--accent); border-radius: 6px; overflow: hidden; }
+  .lang button {
+    border: 0; background: #fff; color: var(--accent);
+    padding: 7px 14px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .print-btn {
+    border: 1px solid var(--accent); background: var(--accent); color: #fff;
+    border-radius: 6px; padding: 7px 16px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+  }
+  .print-btn:hover { background: #162b47; }
+  .toolbar button:focus-visible { outline: 3px solid #7aa7e0; outline-offset: 2px; }
+
+  /* Paper */
+  .page {
+    width: 210mm; max-width: 100%;
+    margin: 20px auto 40px;
+    padding: 16mm 17mm;
+    background: var(--paper);
+    box-shadow: 0 2px 14px rgba(0,0,0,.15);
+  }
+
+  header { text-align: center; margin-bottom: 4px; }
+  h1 { margin: 0; font-size: 19pt; letter-spacing: .02em; line-height: 1.2; }
+  .role { margin: 2px 0 0; font-size: 11.5pt; font-weight: 700; }
+  .contact { margin: 3px 0 0; font-size: 10pt; color: var(--muted); }
+
+  h2 {
+    margin: 16px 0 6px;
+    padding-bottom: 3px;
+    font-size: 11.5pt; font-weight: 700; letter-spacing: .04em;
+    border-bottom: 1.5px solid var(--rule);
+  }
+  p { margin: 0; }
+  .summary { text-align: justify; }
+
+  .skill { margin: 0 0 4px; }
+  .skill b { font-weight: 700; }
+
+  .entry { margin-bottom: 10px; break-inside: avoid; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .row .title { font-weight: 700; }
+  .row .date { font-weight: 700; white-space: nowrap; }
+  .org { font-style: italic; margin: 0 0 2px; }
+
+  ul { margin: 3px 0 0; padding-left: 20px; }
+  li { margin-bottom: 2px; padding-left: 2px; }
+  li::marker { font-size: 9pt; }
+
+  @media (max-width: 640px) {
+    .page { margin: 0; padding: 18px 16px 28px; box-shadow: none; }
+    .row { flex-direction: column; gap: 0; }
+    .toolbar { justify-content: center; }
+  }
+
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: #fff; font-size: 10pt; }
+    .toolbar { display: none; }
+    .page { margin: 0; width: 100%; box-shadow: none; padding: 14mm 16mm; }
+    h2 { break-after: avoid; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" id="btn-en" aria-pressed="true">EN</button>
+    <button type="button" id="btn-id" aria-pressed="false">ID</button>
+  </div>
+  <button type="button" class="print-btn" id="btn-print" data-i18n data-id="Cetak / Simpan PDF">Print / Save as PDF</button>
+</div>
+
+<main class="page" id="cv">
+
+  <header>
+    <h1>AFIFAH RAHMA ADIBAH SAMUDRA</h1>
+    <p class="role" data-i18n data-id="Staf Administrasi | Data Entry">Administrative Staff | Data Entry</p>
+    <p class="contact" data-i18n data-id="Bandar Lampung, Lampung, Indonesia (Bersedia Relokasi)">Bandar Lampung, Lampung, Indonesia (Open to Relocation)</p>
+    <p class="contact">+62 851-8708-0568 &nbsp;|&nbsp; afifahsamudra9@gmail.com</p>
+  </header>
+
+  <section>
+    <h2 data-i18n data-id="RINGKASAN PROFESIONAL">PROFESSIONAL SUMMARY</h2>
+    <p class="summary" data-i18n
+       data-id="Lulusan Manajemen Informatika yang teliti (IPK 3,68/4,00) yang mencari posisi Staf Administrasi atau Data Entry. Berpengalaman menyiapkan lebih dari 20 dokumen SP2D per hari di BPKAD Lampung Tengah secara akurat dan tepat waktu, serta terampil dalam data entry, pengelolaan arsip, pelaporan bulanan di Excel, dan stock opname. Memadukan pengalaman administrasi pemerintahan dengan keahlian SQL dan sistem inventaris untuk menjaga catatan tetap akurat dan terdokumentasi dengan baik.">Detail-oriented Informatics Management graduate (GPA 3.68/4.00) seeking an Administrative Staff or Data Entry position. Experienced in preparing 20+ SP2D payment advice documents per day at BPKAD Lampung Tengah, accurately and on schedule, with strong skills in data entry, records management, monthly reporting in Excel, and stock opname. Combines hands-on government administration with SQL and inventory-system skills to keep records accurate and well documented.</p>
+  </section>
+
+  <section>
+    <h2 data-i18n data-id="KEAHLIAN UTAMA">CORE SKILLS</h2>
+    <p class="skill"><b data-i18n data-id="Administrasi &amp; Pengelolaan Arsip:">Administration &amp; Records Management:</b>
+      <span data-i18n data-id="Data Entry, Pengelolaan Arsip, Penyusunan Dokumen, Pelaporan, Pengarsipan, Penulisan Proposal &amp; Laporan Pertanggungjawaban (LPJ)">Data Entry, Records Management, Document Preparation, Reporting, Filing, Proposal &amp; Accountability Report (LPJ) Writing</span></p>
+    <p class="skill"><b data-i18n data-id="Keuangan &amp; Inventaris:">Finance &amp; Inventory:</b>
+      <span data-i18n data-id="Stock Opname (Penghitungan Persediaan), Rekapitulasi Data Pajak, Penyusunan SP2D, Perencanaan Anggaran (RAB), Pencatatan Arus Kas">Stock Opname (Inventory Count), Tax Data Recapitulation, Payment Advice (SP2D) Preparation, Budget Planning (RAB), Cash Flow Tracking</span></p>
+    <p class="skill"><b data-i18n data-id="Perangkat &amp; Platform:">Tools &amp; Platforms:</b>
+      Microsoft Excel (VLOOKUP, HLOOKUP, SUM, AVERAGE), Microsoft Word, Microsoft PowerPoint, Google Workspace, SQL, MySQL</p>
+  </section>
+
+  <section>
+    <h2 data-i18n data-id="PENGALAMAN KERJA">WORK EXPERIENCE</h2>
+
+    <div class="entry">
+      <div class="row">
+        <span class="title" data-i18n data-id="Magang Administrasi &amp; Pengembangan Web">Administrative &amp; Web Development Intern</span>
+        <span class="date" data-i18n data-id="Juni 2025 - Agustus 2025">June 2025 - August 2025</span>
+      </div>
+      <p class="org">BPKAD Lampung Tengah, Indonesia</p>
+      <ul>
+        <li data-i18n data-id="Menyiapkan lebih dari 20 dokumen SP2D per hari secara akurat dan tepat waktu untuk mendukung pencairan dana pemerintah daerah.">Prepared 20+ SP2D payment advice documents per day, accurately and on schedule, to support regional government disbursements.</li>
+        <li data-i18n data-id="Merekap data pajak daerah bulanan dari seluruh instansi pemerintah daerah di Lampung Tengah menggunakan Microsoft Excel, menghasilkan laporan terstruktur untuk pemantauan dan pelaporan.">Recapped monthly regional tax data from all regional government agencies in Lampung Tengah in Microsoft Excel, producing organized reports for monitoring and reporting.</li>
+        <li data-i18n data-id="Melakukan stock opname perlengkapan kantor dan mencocokkan hasil hitung fisik (hingga ratusan unit per item) dengan catatan inventaris untuk meningkatkan akurasi data stok.">Conducted stock opname of office supplies, reconciling physical counts (up to hundreds of units per item) with inventory records to improve stock data accuracy.</li>
+        <li data-i18n data-id="Membangun sistem manajemen inventaris berbasis web (Laravel, MySQL) dengan dasbor real-time dan penghitungan ulang stok otomatis, disempurnakan melalui masukan pengguna.">Built a web-based inventory management system (Laravel, MySQL) with a real-time dashboard and automated stock recalculation, refined through user feedback.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <span class="title" data-i18n data-id="Web Developer">Web Developer</span>
+        <span class="date" data-i18n data-id="Oktober 2025 - Agustus 2026">October 2025 - August 2026</span>
+      </div>
+      <p class="org">Satgas P4GN - Universitas Lampung, Bandar Lampung, Indonesia</p>
+      <ul>
+        <li data-i18n data-id="Mendokumentasikan kebutuhan untuk tiga peran pengguna (Klien, Konselor, Admin) dalam bentuk spesifikasi fungsional.">Documented requirements for three user roles (Client, Counselor, Admin) as functional specifications.</li>
+        <li data-i18n data-id="Menyusun hasil survei menjadi statistik kepuasan pengguna untuk pelaporan kepada pemangku kepentingan.">Compiled survey responses into user satisfaction statistics for stakeholder reporting.</li>
+        <li data-i18n data-id="Menghasilkan aplikasi terpusat (satgasp4gn.unila.ac.id) yang menjaga catatan konseling tetap privat dan tertata, divalidasi melalui User Acceptance Testing (UAT).">Delivered a centrally managed application (satgasp4gn.unila.ac.id) that keeps counseling records private and well organized, validated through User Acceptance Testing (UAT).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i18n data-id="PENGALAMAN ORGANISASI">ORGANIZATIONAL EXPERIENCE</h2>
+    <div class="entry">
+      <div class="row">
+        <span class="title" data-i18n data-id="Panitia Inti &amp; Bendahara Eksekutif">Core Committee &amp; Executive Treasurer</span>
+      </div>
+      <p class="org">HIMAKOM Unila - “Project Showcase 2024”, Bandar Lampung, Indonesia</p>
+      <ul>
+        <li data-i18n data-id="Merancang rencana anggaran biaya (RAB) acara dan mengelola arus kas dengan pencatatan transparan serta dokumentasi lengkap, sehingga acara tetap sesuai anggaran.">Designed the event budget plan (RAB) and managed cash flow with transparent records and complete documentation, keeping the event within budget.</li>
+        <li data-i18n data-id="Menyusun proposal dan laporan pertanggungjawaban (LPJ) acara serta berkontribusi pada konsep acara dan alur kegiatan.">Prepared the event proposal and accountability report (LPJ) and contributed to the event concept and activity flow.</li>
+        <li data-i18n data-id="Mengevaluasi pelaksanaan acara terhadap alur dan anggaran yang direncanakan agar sesuai dengan harapan pemangku kepentingan.">Evaluated event execution against the planned flow and budget to meet stakeholder expectations.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i18n data-id="PENDIDIKAN">EDUCATION</h2>
+    <div class="entry">
+      <div class="row">
+        <span class="title" data-i18n data-id="D3 - Manajemen Informatika">D3 - Informatics Management (Manajemen Informatika)</span>
+        <span class="date">2023 - 2026</span>
+      </div>
+      <p class="org"><span data-i18n data-id="Universitas Lampung, Bandar Lampung, Indonesia">Universitas Lampung, Bandar Lampung, Indonesia</span> &nbsp;|&nbsp; <span data-i18n data-id="IPK: 3,68 / 4,00">GPA: 3.68 / 4.00</span></p>
+      <p class="skill" style="margin-top:3px"><b data-i18n data-id="Mata Kuliah Relevan:">Relevant Coursework:</b>
+        <span data-i18n data-id="Aplikasi Pengolah Kata dan Presentasi (Microsoft Word &amp; PowerPoint), Aplikasi Spreadsheet (Microsoft Excel), Basis Data (SQL)">Word Processing and Presentation Applications (Microsoft Word &amp; PowerPoint), Spreadsheet Applications (Microsoft Excel), Database (SQL)</span></p>
+      <p class="skill"><b data-i18n data-id="Sertifikasi:">Certification:</b>
+        <span data-i18n data-id="English Proficiency Test (EPT), Universitas Lampung - Skor: 490 (Berlaku Juli 2026 - Juli 2028)">English Proficiency Test (EPT), Universitas Lampung - Score: 490 (Valid July 2026 - July 2028)</span></p>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i18n data-id="PENCAPAIAN">ACHIEVEMENTS</h2>
+    <div class="entry">
+      <div class="row">
+        <span class="title" data-i18n data-id="10 Besar Finalis - Kompetisi Wirausaha Muda Pemula">Top 10 Finalist - Young Entrepreneur Competition (Wirausaha Muda Pemula)</span>
+        <span class="date">2025</span>
+      </div>
+      <p class="org">FMIPA Universitas Lampung</p>
+      <ul>
+        <li data-i18n data-id="Mengembangkan “WONTASTIC”, konsep bisnis makanan sehat dan praktis untuk mahasiswa dan pekerja kantoran, dengan wonton ayam tanpa pengawet, pemasaran digital, dan layanan pengantaran.">Developed “WONTASTIC,” a healthy and practical food business concept for students and office workers, featuring preservative-free chicken wontons, digital marketing, and delivery service.</li>
+        <li data-i18n data-id="Menganalisis kelayakan operasional dan menyusun rencana bisnis dengan target 10.800 unit pada tahun pertama, proyeksi ROI 174,9%, dan periode pengembalian modal 1,26 bulan.">Analyzed operational feasibility and prepared a business plan targeting 10,800 units in the first year, with a projected ROI of 174.9% and a payback period of 1.26 months.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  var nodes = document.querySelectorAll('[data-i18n]');
+  nodes.forEach(function (el) { el.setAttribute('data-en', el.innerHTML); });
+
+  var btnEn = document.getElementById('btn-en');
+  var btnId = document.getElementById('btn-id');
+
+  function setLang(lang) {
+    nodes.forEach(function (el) {
+      var txt = el.getAttribute(lang === 'id' ? 'data-id' : 'data-en');
+      if (txt !== null) el.innerHTML = txt;
+    });
+    document.documentElement.lang = lang;
+    btnEn.setAttribute('aria-pressed', String(lang === 'en'));
+    btnId.setAttribute('aria-pressed', String(lang === 'id'));
+    try { localStorage.setItem('cv-lang', lang); } catch (e) {}
+  }
+
+  btnEn.addEventListener('click', function () { setLang('en'); });
+  btnId.addEventListener('click', function () { setLang('id'); });
+  document.getElementById('btn-print').addEventListener('click', function () { window.print(); });
+
+  var saved = null;
+  try { saved = localStorage.getItem('cv-lang'); } catch (e) {}
+  if (saved === 'id') setLang('id');
+})();
+</script>
+</body>
+</html>
